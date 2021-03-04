@@ -1,0 +1,107 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: azure;
+    font-size: 20px;
+    text-align: center;
+}
+#nev, #iskola, #kepesseg, #kep, #nav{
+    padding:20px;
+}
+#nev{
+    background-color:hotpink;
+}
+#iskola{
+    background-color:tomato;
+    text-align: left;
+}
+#kepesseg {
+    background-color: deepskyblue;
+    text-align:left;
+}
+#kep {
+    background-color: gold;
+}
+#nav {
+    background-color: lightgreen;
+    display: flex;
+}
+#nav a{
+    flex: 1 1 auto;
+    text-decoration:none;
+    color:black;
+}
+#footer {
+    background-color: hotpink;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-style: italic;
+    font-size: 30px;
+}
+
+
+span {
+    font-weight: bold;
+}
+
+.kepessegek {
+    border-radius: 25px;
+}
+
+img {
+    margin: auto;
+    padding: 10px;
+    border: 3px solid brown;
+    border-radius: 15px;
+}
+
+a:hover {
+    background-color: fuchsia;
+}
+
+.kepalairas {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    #tarto {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #nav,
+    #header {
+        order: -1;
+    }
+    #nev{
+        order:1;
+        flex: 1 1 50%;
+    }
+    #kep{
+        order:2;
+        flex: 1 1 50%;
+    }
+    #iskola {
+        order: 3;
+        flex: 1 1 75%;
+    }
+
+    #kepesseg {
+        order: 4;
+        flex: 1 1 25%;
+    }
+}
