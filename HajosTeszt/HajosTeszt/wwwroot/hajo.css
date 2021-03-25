@@ -28,17 +28,14 @@ html, body {
 #válasz1 {
     padding: 20px;
     border: 2px solid brown;
-    background-color: antiquewhite;
 }
 #válasz2 {
     padding: 20px;
     border: 2px solid brown;
-    background-color: antiquewhite;
 }
 #válasz3 {
     padding: 20px;
     border: 2px solid brown;
-    background-color: antiquewhite;
 }
 
 #kép {
@@ -58,14 +55,7 @@ html, body {
     border: 2px solid brown;
     background-color: antiquewhite;
 }
+.kattintható:hover{
+    background-color:fuchsia
+}
 
-.kattintható:hover {
-    background-color: fuchsia !important;
-    color: white;
-}
-.jó:active {
-    background-color: green !important;
-}
-.rossz:active {
-    background-color: red !important;
-}
