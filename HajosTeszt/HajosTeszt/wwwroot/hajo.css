@@ -48,6 +48,10 @@ html, body {
     justify-content: space-between;
 }
 
+#rejtett{
+    display: none;
+}
+
 .gomb {
     padding: 20px;
     width: 80px;

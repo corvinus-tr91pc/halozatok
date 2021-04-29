@@ -1,10 +1,10 @@
 ﻿var sorszam;
-var question;
+var kérdés;
 
 function szinez() {
     document.getElementById("válasz1").addEventListener('click', event => {
         var gomb = document.getElementById("válasz1")
-        if (question.correctAnswer == 1) {
+        if (kérdés.correctAnswer == 1) {
             gomb.style.backgroundColor = "green";
         }
         else {
@@ -14,7 +14,7 @@ function szinez() {
 
     document.getElementById("válasz2").addEventListener('click', event => {
         var gomb = document.getElementById("válasz2")
-        if (question.correctAnswer == 2) {
+        if (kérdés.correctAnswer == 2) {
             gomb.style.backgroundColor = "green";
         }
         else {
@@ -24,13 +24,14 @@ function szinez() {
 
     document.getElementById("válasz3").addEventListener('click', event => {
         var gomb = document.getElementById("válasz3")
-        if (question.correctAnswer == 3) {
+        if (kérdés.correctAnswer == 3) {
             gomb.style.backgroundColor = "green";
         }
         else {
             gomb.style.backgroundColor = "red"
         }
     });
+
 }
 
 function visszaszinez() {
@@ -51,17 +52,18 @@ fetch('/questions/1')
 
 function kérdésMegjelenítés(kérdés) {
     console.log(kérdés);
-    question = kérdés;
+    kérdés = kérdés;
     document.getElementById("kérdés_szöveg").innerText = kérdés.questionText
     document.getElementById("válasz1").innerText = kérdés.answer1
     document.getElementById("válasz2").innerText = kérdés.answer2
     document.getElementById("válasz3").innerText = kérdés.answer3
-    if (document.getElementById("kép").src == "") {
-        document.getElementById("kép").hidden = true;
+
+    if (kérdés.image) {
+        document.getElementById("kép").src = "https://szoft1.comeback.hu/hajo/" + kérdés.image;
+        document.getElementById("kép").classList.remove("rejtett")
     }
     else {
-        document.getElementById("kép").src = "https://szoft1.comeback.hu/hajo/" + kérdés.image;
-        document.getElementById("kép").hidden = false;
+        document.getElementById("kép").classList.add("rejtett")
     }
     
 
